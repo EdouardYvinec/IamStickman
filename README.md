@@ -24,4 +24,4 @@ The provided source code should be placed as follows
     └── Test4
 ```
 ## Data
-The dataset for test will be provided as well as the backgrounds to add in the generator folder.
+The dataset for test is provided as well as the backgrounds to add in the generator folder.

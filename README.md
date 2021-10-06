@@ -27,4 +27,4 @@ The provided source code should be placed as follows
 The dataset for test is provided as well as the backgrounds to add in the generator folder.
 
 ## To use the same conda environment 
-conda env create -f tf2.yaml
+conda env create -file tf2.yaml

@@ -52,8 +52,8 @@ class stick_man_generator(tf.keras.utils.Sequence):
         max_KP_y = np.expand_dims(np.max(KP_y, axis=1), axis=-1)
         KP_x = (KP_x - min_KP_x) / (max_KP_x - min_KP_x)
         KP_y = (KP_y - min_KP_y) / (max_KP_y - min_KP_y)
-        KP_x = KP_x * self.input_shape[0] / np.max(KP_x)
-        KP_y = KP_y * self.input_shape[1] / np.max(KP_y)
+        KP_x = KP_x * (self.input_shape[0] -1) / np.max(KP_x)
+        KP_y = KP_y * (self.input_shape[1] -1) / np.max(KP_y)
         for b in range(self.batch_size):
             images[b, ...] = draw_a_stickman(
                 images[b, ...],

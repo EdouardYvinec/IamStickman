@@ -1,0 +1,10 @@
+.DS_Store
+*.hdf
+*.h5
+*.hdf5
+*.he5
+*.env
+*.txt
+__pycache__/
+backgrounds
+Dataset

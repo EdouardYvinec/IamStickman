@@ -12,7 +12,7 @@ def evaluate_on_a_set(DNN, image_shape, eval_set):
 				labels = np.load('../Dataset/' + 'test' + str(eval_set) + '_labels.npy')
 				is_labelled = True
 			images = ['../Dataset/Test' + str(eval_set) + '/' + e for e in os.listdir('../Dataset/Test' + str(eval_set)) if '.png' in e]
-			images.sort()
+			images.sort(key=lambda f: int(filter(str.isdigit, f))
 			for cpt, img in enumerate(images):
 				print('\rtesting on set %i/4 : %i/%i'%(eval_set, cpt+1, len(images)), end='')
 				img_ = cv2.imread(img, cv2.IMREAD_UNCHANGED)
@@ -53,7 +53,7 @@ def evaluate_on_a_set(DNN, image_shape, eval_set):
 				labels = np.load('../Dataset/' + 'test' + str(eval_set) + '_labels.npy')
 				is_labelled = True
 			images = ['../Dataset/Test' + str(eval_set) + '/' + e for e in os.listdir('../Dataset/Test' + str(eval_set)) if '.png' in e]
-			images.sort()
+			images.sort(key=lambda f: int(filter(str.isdigit, f))
 			for cpt, img in enumerate(images):
 				print('\rtesting on set %i/4 : %i/%i'%(eval_set, cpt+1, len(images)), end='')
 				img_ = cv2.imread(img, cv2.IMREAD_UNCHANGED)
